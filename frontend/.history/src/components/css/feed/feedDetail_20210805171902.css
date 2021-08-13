@@ -1,0 +1,51 @@
+.photo-zone {
+  width: 100%;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: white;
+}
+
+.feed-detail-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feed-detail-bottom {
+  padding-top: 1rem;
+}
+
+.heart {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.margin-sm {
+  margin-left: 7px;
+  margin-bottom: 2px;
+  margin-right: 5px;
+}
+
+.text-s-g {
+  color: #adadad;
+  font-size: small;
+}
+
+.feed-content {
+  word-break: keep-all;
+  float: left;
+}
+
+.feed-userID {
+  float: left;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.i-am-like {
+  display: flex;
+  align-items: center;
+  vertical-align: center;
+}

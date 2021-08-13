@@ -1,0 +1,24 @@
+button {
+  border: 0;
+  outline: 0;
+}
+em {
+  color: gray;
+  font-style: normal;
+}
+.btn-primary {
+  background-color: #ffa061;
+  border: none;
+}
+.btn-primary:visited {
+  background-color: #fa904d;
+  border: none;
+}
+.btn-primary:active {
+  background-color: #fa904d;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #fa904d;
+  border: none;
+}

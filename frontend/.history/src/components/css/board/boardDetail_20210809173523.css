@@ -1,0 +1,12 @@
+.board-title {
+  font-size: 18px;
+}
+
+.writer {
+  color: black !important;
+}
+
+.board-top {
+  border-bottom: 1px solid gray;
+  margin-top: 2px;
+}

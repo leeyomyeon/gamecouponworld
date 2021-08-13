@@ -1,0 +1,22 @@
+<template>
+  <div>
+    <h1>게시글 상세페이지</h1>
+    <div><BoardDetail></BoardDetail></div>
+    <div><v-if="getUserFromCookie()" CommentCreateForm /></div>
+  </div>
+</template>
+
+<script>
+import BoardDetail from '@/components/board/BoardDetail.vue'
+import CommentCreateForm from '@/components/board/CommentCreateForm.vue'
+import { getUserFromCookie } from '@/utils/cookies.js'
+
+export default {
+  components: {
+    BoardDetail,
+    CommentCreateForm,
+  },
+}
+</script>
+
+<style></style>

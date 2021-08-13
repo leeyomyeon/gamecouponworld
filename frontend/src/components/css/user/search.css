@@ -1,0 +1,67 @@
+.box {
+  padding: 0 5%;
+}
+
+.container-nowrap {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+.container-nowrap div {
+  flex: 1;
+}
+
+.container-nowrap div input {
+  width: 100%;
+  border-radius: 1em;
+  outline: none;
+  height:2em;
+}
+
+.container-nowrap label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1em;
+  height:2em;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: fixed;
+  left: 0;
+  right:0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+.dialog {
+  position: relative;
+  margin-top: 15%;
+  /* 뷰포트너비의 100분의 x */
+  width: 80vw;
+  padding: 1.3em;
+  border-radius: 1em;
+  background: white;
+  animation-name: type-search;
+  animation-duration: 0.3s;
+  animation-iteration-count: initial;
+}
+
+@keyframes type-search {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.list {
+  font-size: 0.8rem;
+}
+
+.list div {
+  display: flex;
+  justify-content: space-between;
+}

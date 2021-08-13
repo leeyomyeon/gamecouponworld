@@ -1,0 +1,44 @@
+<template>
+  <div>
+    <h3>댓글 작성 Form</h3>
+    <div class="d-flex">
+      <input
+        type="text"
+        @keyup.enter="onSubmit"
+        v-model="userComment"
+        class="form-control"
+        autofocus
+      />
+      <button @click="onSubmit" class="btn btn-primary">등록</button>
+    </div>
+  </div>
+</template>
+
+<script>
+import { createComment } from '@/api/boards.js'
+
+export default {
+  data() {
+    return {
+      userComment: '',
+    }
+  },
+  methods: {
+    onSubmit() {
+      if (this.userComment.length > 200) {
+        this.userComment = ''
+      } else {
+        createComment(this.userComment)
+          .then(() => {
+            console.log('댓글저장성공')
+            this.userInput = ''
+          })
+          .catch(() => {
+            console.log('댓글작성실패')
+            this.userInput = ''
+          })
+      }
+    },
+  },
+}
+</script>

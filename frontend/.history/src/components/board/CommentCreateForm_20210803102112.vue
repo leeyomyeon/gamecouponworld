@@ -1,0 +1,51 @@
+<template>
+  <div>
+    <h3>댓글 작성 Form</h3>
+    <div class="d-flex">
+      <input
+        type="text"
+        @keyup.enter="onSubmit"
+        v-model="userComment"
+        class="form-control"
+        autofocus
+      />
+      <button @click="onSubmit" class="btn btn-primary">등록</button>
+    </div>
+  </div>
+</template>
+
+<script>
+import { createComment } from '@/api/boards.js'
+import { getUserFromCookie } from '@/utils/cookies.js'
+
+export default {
+  data() {
+    return {
+      boardData: {
+        userComment: '',
+        boardID: 'this.$route.params.id',
+        writer: getUserFromCookie(),
+      },
+    }
+  },
+  methods: {
+    onSubmit() {
+      console.log(this.userComment)
+      if (this.boardData.userComment.length > 200) {
+        this.boardData.userComment = ''
+        console.log('200자가 넘는 댓글은 작성하실 수 없습니다')
+      } else {
+        createComment(this.boardData.userComment)
+          .then(() => {
+            console.log('댓글저장성공')
+            this.boardData.userComment = ''
+          })
+          .catch(() => {
+            console.log('댓글작성실패')
+            this.boardData.userComment = ''
+          })
+      }
+    },
+  },
+}
+</script>

@@ -1,0 +1,13 @@
+router-link {
+}
+
+.board-nav {
+  display: inline-block;
+  height: 39px;
+  line-height: 40px;
+  text-indent: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}

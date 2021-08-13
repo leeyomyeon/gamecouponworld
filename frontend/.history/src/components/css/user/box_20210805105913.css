@@ -1,0 +1,115 @@
+/* 첫번째 div */
+.login-box {
+  padding: 0 5%;
+}
+/* 전체 form */
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* 해당 page 제목 */
+.sub-title {
+  font-weight: bold;
+}
+
+/* title&logMessage */
+form p {
+  margin-bottom: 1.5rem;
+}
+/* 각각의 입력 항목을 포함한 div */
+.item {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.25em;
+}
+/* input style */
+#userID,
+#password {
+  width: 100%;
+  height: 34px;
+  outline: none;
+  background: #333;
+  border: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 1.1rem;
+}
+/* input과 label을 묶은 input-box style */
+/* .input-box {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  padding: 1em 1.25em 0 1.25em;
+  background: #333;
+  border-radius: 4px;
+} */
+/* label style */
+label {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 1.3em;
+  padding-left: 0.5em;
+  font-size: 14px;
+  color: #8c8c8c;
+  font-weight: bold;
+  transition: 0.1s;
+}
+/* label transform */
+.input-box input:not(:placeholder-shown) + label,
+.input-box input:focus + label {
+  transform: translateY(-1em);
+  font-size: 10px;
+}
+/* 작은 경고 알림 style */
+.item p {
+  width: 100%;
+  color: #e87c03;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 0;
+  padding: 3px 6px;
+}
+/* 로그인 시 경고 style */
+.logMessage {
+  background: #e87c03;
+  width: 100%;
+  border-radius: 4px;
+  text-align: center;
+  padding: 10px 20px;
+  color: #fff;
+  position: relative;
+  animation-name: fadeOut;
+  animation-duration: 0.2s;
+  animation-iteration-count: initial;
+}
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* button 크기 style */
+button {
+  width: 100%;
+  padding: 0;
+}
+button {
+  margin: 20px 0;
+  padding: 0.8em;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+}
+/* 비활성화 */
+button:disabled {
+  background: gray;
+}
+/* 활성화 */
+button:enabled {
+  background: #e50914;
+}

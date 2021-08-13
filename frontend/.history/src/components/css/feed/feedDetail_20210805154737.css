@@ -1,0 +1,9 @@
+.photo-zone {
+  width: 100%;
+}
+
+.photo-zone:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}

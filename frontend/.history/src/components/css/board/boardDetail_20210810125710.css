@@ -1,0 +1,56 @@
+.board-title {
+  font-size: 18px;
+  padding-left: 5px;
+}
+
+.writer {
+  color: black !important;
+  padding-left: 5px;
+}
+
+.board-top {
+  border-bottom: 1px solid #dadada;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+.board-body {
+  border-bottom: 1px solid #dadada;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 50px;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.btn-primary {
+  background-color: #ffa061;
+  border: none;
+  margin: 3px;
+}
+.btn-primary:visited {
+  background-color: #fa904d;
+  border: none;
+}
+.btn-primary:active {
+  background-color: #fa904d;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #fa904d;
+  border: none;
+}
+
+.btn-list {
+  display: flex;
+  justify-content: flex-end;
+  margin: 3px;
+}
+
+.btn-update,
+.btn-delete {
+  background-color: #ffc8a3;
+}

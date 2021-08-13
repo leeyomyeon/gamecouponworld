@@ -1,0 +1,76 @@
+.container {
+  display: flex;
+}
+.manager {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.form-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.form-box input{
+  margin-top: 1em;
+  width: 100%;
+  color: #ffa061;
+  border-color: #ffa061;
+  border-radius: 4px;
+}
+.form-box-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.form-box-div p {
+  margin-top: 0.4em;
+  color: grey;
+  font-size: 0.8rem;
+}
+.form-box-div button{
+  background: #ffa061;
+  margin-top:0.1em;
+  width: 30%;
+  border-radius: 4px;
+  color: whitesmoke;
+}
+.btn-fm-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.afk-plus {
+  background: #3d8bfd;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 0.2em 0.3em;
+  width: 55%;
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: center;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right:0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+.dialog {
+  position: relative;
+  /* 뷰포트너비의 100분의 x */
+  width: 70vw;
+  height: 65vw;
+  padding: 1em;
+  border-radius: 1em;
+  background: white;
+}

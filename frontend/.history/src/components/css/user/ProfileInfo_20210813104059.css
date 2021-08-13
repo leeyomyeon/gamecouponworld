@@ -1,0 +1,51 @@
+.imgbox {
+  justify-content: center;
+}
+button {
+  margin: 20px 0;
+  padding: 0.8em;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+}
+.photo {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5% 5%;
+}
+.top {
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+.menu-button {
+  width: 50%;
+  background-color: #8c92a3;
+}
+button:disabled {
+  background: #ffa061;
+}
+/* 활성화 */
+button:enabled {
+  background: #8c92a3;
+}
+
+.follow-btn {
+  background: #ffa061 !important;
+}
+
+.pf-userID {
+  padding-left: 12px;
+  padding-top: 5px;
+}
+
+.search-input {
+  height: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 30px;
+}
+
+.search-btn {
+  background: #ffa061 !important;
+}

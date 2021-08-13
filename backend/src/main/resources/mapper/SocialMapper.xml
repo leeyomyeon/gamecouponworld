@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssafy.backend.social.mapper.SocialMapper">
+	<select id="findFollower" parameterType="String" resultType="String">
+		select sourceID
+		from follow
+		where targetID = #{userID} and type=0
+	</select>
+	
+	<select id="findFollowing" parameterType="String" resultType="String">
+		select targetID
+		from follow
+		where sourceID = #{userID} and type=0;
+	</select>
+	
+	<insert id="requestFollow" parameterType="SocialModel">
+		insert into follow
+		values(null,1,#{sourceID},#{targetID},0)
+	</insert>
+	
+	<update id="allowFollow" parameterType="SocialModel">
+	update follow
+	set type = 0
+	where sourceID = #{sourceID} and targetID= #{targetID}
+	</update>
+	
+	<delete id="cancleFollow" parameterType="SocialModel">
+	delete from follow
+	where sourceID = #{sourceID} and targetID= #{targetID}
+	</delete>
+	
+	<select id="findrequestFollow" parameterType="String" resultType="String">
+	select sourceID 
+	from follow
+	where targetID = #{userID} and type = 1 
+	</select>
+	
+	<select id="checkDuplicate" parameterType="SocialModel" resultType="SocialModel">
+	select * 
+	from follow
+	where sourceID = #{sourceID} and targetID= #{targetID}
+	</select>
+	
+	<select id="findrequestFollowOne" parameterType="SocialModel" resultType="SocialModel">
+	select * 
+	from follow
+	where sourceID= #{sourceID} and targetID= #{targetID} and type=1;
+	</select>
+	
+	<delete id="canclerequestFollow" parameterType="SocialModel">
+	delete from follow
+	where sourceID= #{sourceID} and targetID= #{targetID} and type=1;
+	</delete>
+	
+	<select id="findAlaram" parameterType="String" resultType="SocialModel">
+	select * from follow
+	where targetID=#{targetID} and type=1 and alarm=0;
+	</select>
+	
+	<update id="readAlarm" parameterType="SocialModel" >
+	update follow
+	set alarm = 1
+	where sourceID = #{sourceID} and targetID= #{targetID}
+	
+	</update>
+
+</mapper>

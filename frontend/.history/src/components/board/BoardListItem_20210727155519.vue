@@ -1,0 +1,33 @@
+<template>
+  <div>
+    <!-- 밑에 @click="detail(idx) -->
+    <tr>
+      <th scope="row">{{ listItem.boardID }}</th>
+      <td>{{ listItem.title }}</td>
+      <td>{{ listItem.writer }}</td>
+      <td>{{ listItem.date }}</td>
+      <td>{{ listItem.viewCount }}</td>
+      <td>{{ listItem.recommend }}</td>
+    </tr>
+  </div>
+</template>
+
+<script>
+import { fetchBoard } from '@/api/boards'
+
+export default {
+  props: {
+    listItem: {
+      type: Object,
+      required: true,
+    },
+  },
+  // methods: {
+  //   detail() {
+  //     this.$router.push({
+  //       path: '/board/detail',
+  //     })
+  //   },
+  // },
+}
+</script>

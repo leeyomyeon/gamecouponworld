@@ -1,0 +1,23 @@
+<template>
+  <!-- 밑에 @click="detail(idx) -->
+  <tr @click="$router.push('board/' + listItem.id)">
+    <th scope="row">{{ listItem.id }}</th>
+    <td>쿠키런 킹덤</td>
+    <td>{{ listItem.title }}</td>
+    <td>{{ listItem.writer }}</td>
+    <td>{{ listItem.date }}</td>
+    <td>{{ listItem.viewCount }}</td>
+    <td>{{ listItem.recommend }}</td>
+  </tr>
+</template>
+
+<script>
+export default {
+  props: {
+    listItem: {
+      type: Object,
+      required: true,
+    },
+  },
+}
+</script>

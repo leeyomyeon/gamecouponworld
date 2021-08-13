@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <style>
+      .bigScreen {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #fce006;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        color: white;
+        font-size: 28px;
+        text-align: center;
+        line-height: 1.5;
+        padding: 0px 20px;
+        display: none;
+        z-index: 4;
+      }
+      @media screen and (min-width: 550px) {
+        .bigScreen {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bigScreen">
+      <span class="bigScreen_text">Please make you screen small!</span>
+    </div>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

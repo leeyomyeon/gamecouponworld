@@ -1,0 +1,27 @@
+.photo-zone {
+  width: 100%;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: white;
+}
+
+.feed-detail-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feed-detail-bottom {
+  padding-top: 1rem;
+}
+
+.heart {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.margin-sm {
+  margin-left: 10px;
+}

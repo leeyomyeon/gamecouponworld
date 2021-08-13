@@ -1,0 +1,146 @@
+.box {
+  margin-top: 15%;
+  padding: 5% 5%;
+}
+.img-box {
+  justify-content: center;
+}
+.img-box input[type="file"] {
+  width: 0px; 
+  height: 0px; 
+  padding: 0; 
+  margin: -1px; 
+  overflow: hidden; 
+  clip:rect(0,0,0,0); 
+  border: 0;
+}
+.sub-title {
+  font-weight: 900;
+}
+.form-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pw-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.box p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.item {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.25em;
+}
+.item p {
+  width: 100%;
+  color: #e87c03;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 0;
+  padding: 3px 6px;
+}
+#alias, #passwordCurrent, #passwordChange, #passwordChangeConfirm{
+  width: 100%;
+  height: 2rem;
+  outline: none;
+  background: white;
+  border: 0;
+  padding: 0;
+  color: black;
+  font-size: 1.1rem;
+}
+#bio{
+  width: 100%;
+  height: 5rem;
+  outline: none;
+  background: white;
+  border: 0;
+  padding: 0;
+  color: black;
+  font-size: 1rem;
+}
+.input-box {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  padding: 1em 1.25em 0 1.25em;
+  background: white;
+  border-width: 0.1rem;
+  border-color: black;
+  border-style: solid;
+  border-radius: 4px;
+}
+.input-box-pw {
+  position: relative;
+  z-index: 0;
+  width: 75%;
+  padding: 1em 1.25em 0 1.25em;
+  background: white;
+  border-width: 0.1rem;
+  border-color: black;
+  border-style: solid;
+  border-radius: 4px;
+}
+.input[type="checkbox"]:checked {
+  background: #ffa061;
+}
+
+/* label style */
+label {
+  /* width: 4em; */
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 1.3em;
+  /* padding-left: 0.5em; */
+  font-size: 14px;
+  color: #8c8c8c;
+  background-color: white;
+  font-weight: bold;
+  transition: 0.1s;
+  justify-content: center;
+}
+/* label transform */
+.input-box input:not(:placeholder-shown) + label,
+.input-box input:focus + label,
+.input-box-pw input:not(:placeholder-shown) + label,
+.input-box-pw input:focus + label,
+.input-box textarea:not(:placeholder-shown) + label,
+.input-box textarea:focus + label
+{
+  transform: translateY(-2.1em);
+  font-size: 12px;
+}
+
+#passwordCheckbox {
+  font-size: 1em;
+    width: 1.25em; /* 너비 설정 */
+    height: 1.25em; /* 높이 설정 */
+    vertical-align: middle;
+}
+button {
+  margin: 20px 0;
+  padding: 0.8em;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+}
+/* 비활성화 */
+button:disabled {
+  background: #8c92a3;
+}
+/* 활성화 */
+button:enabled {
+  background: #ffa061;
+}
+
+.deleteButton {
+  display: flex;
+  justify-content: flex-end;
+}
+
+

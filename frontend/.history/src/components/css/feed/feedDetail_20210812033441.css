@@ -1,0 +1,78 @@
+.photo-zone {
+  width: 100%;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: white;
+}
+
+.feed-detail-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.feed-detail-top > p {
+  align-items: center;
+  margin: 0;
+}
+
+.feed-detail-bottom {
+  padding-top: 1rem;
+}
+
+.heart {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.margin-sm {
+  margin-left: 7px;
+  margin-bottom: 2px;
+  margin-right: 5px;
+}
+
+.text-s-g {
+  color: #adadad;
+  font-size: small;
+}
+
+.feed-content {
+  word-break: normal;
+  white-space: normal;
+}
+
+.feed-userID {
+  float: left;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.i-am-like {
+  display: flex;
+  align-items: center;
+}
+
+em {
+  font-size: small;
+  color: #dadada;
+  font-style: normal;
+}
+
+.feed-date {
+  margin-left: 7px;
+}
+
+.follow-feed-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+}
+
+.feed-follow-list-body {
+  width: 100%;
+  border: 1px solid #dadada;
+  padding: 10px;
+  margin: 10px;
+}

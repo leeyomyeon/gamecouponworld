@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssafy.backend.feed.mapper.FeedMapper">
+	<insert id="writeFeed" parameterType="FeedModel" >
+	<![CDATA[
+		INSERT
+		INTO feed (
+			userID,
+			photoPath,
+			content,
+			date,
+			likeCnt
+		)
+		VALUES (
+			#{userID},
+			#{photoPath},
+			#{content},
+			#{date},
+			#{likeCnt}
+		)]]>
+	</insert>
+	
+	<delete id="deleteFeed" parameterType="map">
+		DELETE
+		FROM feed
+		WHERE feedID = #{feedID} AND userID = #{userID}
+	</delete>
+	
+	<update id="incLikeCnt" parameterType="int">
+		UPDATE feed
+		SET likeCnt = likeCnt+1 
+		WHERE feedID = #{feedID};
+	</update>
+
+	<update id="decLikeCnt" parameterType="int">
+		UPDATE feed
+		SET likeCnt = likeCnt-1 
+		WHERE feedID = #{feedID};
+	</update>
+	
+	<select id="getFeedList" parameterType="String" resultType="FeedModel">
+		SELECT *
+		FROM feed
+		WHERE userID = #{userID}
+		ORDER BY date DESC;
+	</select>
+	
+	<insert id="insertLikeFeed" parameterType="map">
+		INSERT
+		INTO likefeed(
+			userID,
+			feedID
+		)
+		VALUES (
+			#{userID},
+			#{feedID}
+		)
+	</insert>
+	
+	<delete id="deleteLikeFeed" parameterType="map">
+		DELETE
+		FROM likefeed
+		WHERE userID = #{userID} AND feedID = #{feedID}
+	</delete>
+	
+	<select id="getMyTimeline" parameterType="String">
+		SELECT feedID, userID, photoPath, content, date, likeCnt
+		FROM feed A 
+		LEFT JOIN follow B 
+		ON A.userID = B.targetID
+		WHERE B.sourceID = #{userID}
+		ORDER BY date DESC
+	</select>
+	
+	<select id="likeFeedList" parameterType="String" resultType="FeedModel">
+		SELECT A.feedID, A.userID, photoPath, content, date, likeCnt
+		FROM feed A 
+		LEFT JOIN likefeed B 
+		ON A.feedID = B.feedID
+		WHERE B.userID = #{userID}
+		ORDER BY date DESC
+	</select>
+	
+	<select id="mainFeedList" resultType="FeedModel">
+		SELECT *
+		FROM feed
+		ORDER BY date DESC
+	</select>
+	
+	
+	<select id="getFeed" parameterType="int" resultType="FeedModel">
+	select * from feed
+	where feedID = #{feedID}
+	</select>
+	
+	
+	
+</mapper>

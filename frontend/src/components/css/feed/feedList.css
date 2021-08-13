@@ -1,0 +1,24 @@
+.box {
+  padding: 5% 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.div-create-button {
+  padding-top: 5%;
+  display: flex;
+  justify-content: center;
+
+}
+/* .create-button {
+  background-color: #ffa061;
+} */
+.menu-button {
+  width: 50%;
+  background-color: #8c92a3
+}
+.active {
+  background-color: #ffa061;
+}
+.no-active {
+  background-color: #8c92a3;
+}

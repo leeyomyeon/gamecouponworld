@@ -1,0 +1,44 @@
+button {
+  border: 0;
+  outline: 0;
+}
+ul {
+  padding-left: 0;
+}
+li {
+  list-style: none;
+  list-style-position: initial;
+  list-style-image: initial;
+  list-style-type: none;
+}
+em {
+  color: gray;
+  font-style: normal;
+}
+.btn-primary {
+  background-color: #ffa061;
+  border: none;
+}
+.btn-primary:visited {
+  background-color: #fa904d;
+  border: none;
+}
+.btn-primary:active {
+  background-color: #fa904d;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #fa904d;
+  border: none;
+}
+
+.comment-box {
+  border: 1px solid black;
+  padding-top: 15px;
+  padding-bottom: 40px;
+}
+
+.comment-top {
+  border-bottom: 1px dashed black;
+  margin-bottom: 40px;
+}

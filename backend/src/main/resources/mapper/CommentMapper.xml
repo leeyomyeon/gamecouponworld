@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssafy.backend.comment.mapper.CommentMapper">
+	<insert id="boardComment" parameterType="CommentModel">
+		INSERT
+		INTO comment (
+			boardID,
+			commentID,
+			parentComment,
+			content,
+			userID,
+			date,
+			recommendCnt
+		)
+		VALUES (
+			#{boardID},
+			#{commentID},
+			#{parentComment},
+			#{content},
+			#{userID},
+			#{date},
+			#{recommendCnt}
+		)
+	</insert>
+	
+	<insert id="feedComment" parameterType="CommentModel">
+		INSERT
+		INTO comment (
+			feedID,
+			commentID,
+			parentComment,
+			content,
+			userID,
+			date,
+			recommendCnt
+		)
+		VALUES (
+			#{feedID},
+			#{commentID},
+			#{parentComment},
+			#{content},
+			#{userID},
+			#{date},
+			#{recommendCnt}
+		)
+	</insert>
+	
+	<select id="getBoardComment" parameterType="int" resultType="CommentModel">
+		SELECT *
+		FROM comment 
+		WHERE boardID = #{boardID} 
+		ORDER BY IF(ISNULL(parentComment), commentID, parentComment);
+	</select>
+	
+	<select id="getFeedComment" parameterType="int" resultType="CommentModel">
+		SELECT *
+		FROM comment 
+		WHERE feedID = #{feedID} 
+		ORDER BY IF(ISNULL(parentComment), commentID, parentComment);
+	</select>
+	
+	<update id="recommendUp" parameterType="int">
+		UPDATE comment
+		SET recommendCnt = recommendCnt+1 
+		WHERE commentID = #{commentID};
+	</update>
+	
+	<update id="recommendDown" parameterType="int">
+		UPDATE comment
+		SET recommendCnt = recommendCnt-1 
+		WHERE commentID = #{commentID};
+	</update>
+	
+	<delete id="deleteComment" parameterType="int">
+		DELETE
+		FROM comment
+		WHERE commentID = #{commentID};
+	</delete>
+</mapper>

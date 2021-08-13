@@ -1,0 +1,38 @@
+/* button */
+button {
+  border: 0;
+  outline: 0;
+}
+.btn-primary {
+  background-color: #ffa061;
+  border: none;
+}
+.btn-primary:visited {
+  background-color: #fa904d;
+  border: none;
+}
+.btn-primary:active {
+  background-color: #fa904d;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #fa904d;
+  border: none;
+}
+
+em {
+  font-size: small;
+  color: #dadada;
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn-submit {
+  padding: 10px;
+}
+
+.comment-list {
+}

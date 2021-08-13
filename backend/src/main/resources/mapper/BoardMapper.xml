@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssafy.backend.board.mapper.BoardMapper">
+	<insert id="writeBoard" parameterType="BoardModel">
+		INSERT
+		INTO BOARD (
+			title, 
+			content, 
+			writer, 
+			date, 
+			photoPath1, 
+			photoPath2, 
+			photoPath3, 
+			photoPath4, 
+			recommend, 
+			viewCount
+		)
+		VALUES (
+			#{title},
+			#{content},
+			#{writer},
+			#{date},
+			#{photoPath1},
+			#{photoPath2},
+			#{photoPath3},
+			#{photoPath4},
+			#{recommend},
+			#{viewCount}
+		)
+	</insert>
+	
+	<delete id="deleteBoard" parameterType="int">
+		DELETE
+		FROM BOARD
+		WHERE boardID = #{boardID}
+	</delete>
+	
+	<update id="updateBoard" parameterType="BoardModel">
+		UPDATE board
+		SET content = #{content},
+			title = #{title}
+		WHERE boardID = #{boardID}
+	</update>
+	
+	<update id="updateViewCount" parameterType="BoardModel">
+		UPDATE board
+		SET viewCount = #{viewCount}
+		WHERE boardID = #{boardID}
+	</update>
+	
+	<select id="searchBoard" parameterType="String" resultType="BoardModel">
+		SELECT *
+		FROM board
+		WHERE ${searchOption} LIKE concat('%', #{value} ,'%')
+		ORDER BY date DESC
+		LIMIT ${limit}
+		OFFSET ${offset}
+	</select>
+	
+	<select id="boardList" resultType="BoardModel">
+		SELECT boardID, title, writer, date, recommend, viewCount
+		FROM board
+		ORDER BY date DESC
+		LIMIT ${limit}
+		offset ${offset}
+	</select>
+	
+	<select id="totalCount" resultType="int">
+		SELECT count(*)
+		FROM board
+	</select>
+	
+	<select id="selectBoard" parameterType="int" resultType="BoardModel">
+		SELECT *
+		FROM board
+		WHERE boardID = #{boardID}
+	</select>
+</mapper>

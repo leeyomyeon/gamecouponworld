@@ -1,0 +1,33 @@
+<template>
+  <div>
+    <!-- 밑에 @click="detail(idx) -->
+    <tr :key="idx" v-for="(value, idx) in listItem">
+      <th scope="row">{{ value.boardID }}</th>
+      <td>{{ value.title }}</td>
+      <td>{{ value.writer }}</td>
+      <td>{{ value.date }}</td>
+      <td>{{ value.viewCount }}</td>
+      <td>{{ value.recommend }}</td>
+    </tr>
+  </div>
+</template>
+
+<script>
+import { fetchBoard } from '@/api/boards'
+
+export default {
+  props: {
+    listItem: {
+      type: Object,
+      required: true,
+    },
+  },
+  // methods: {
+  //   detail() {
+  //     this.$router.push({
+  //       path: '/board/detail',
+  //     })
+  //   },
+  // },
+}
+</script>

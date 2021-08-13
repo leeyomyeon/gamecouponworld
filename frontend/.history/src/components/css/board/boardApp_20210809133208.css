@@ -1,0 +1,27 @@
+router-link {
+}
+
+.board-nav {
+  display: inline-block;
+  line-height: 40px;
+  text-indent: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-bg {
+  background-color: lightsalmon;
+}

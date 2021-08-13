@@ -1,0 +1,47 @@
+/* button */
+button {
+  border: 0;
+  outline: 0;
+}
+.btn-primary {
+  background-color: #ffa061;
+  border: none;
+}
+.btn-primary:visited {
+  background-color: #fa904d;
+  border: none;
+}
+.btn-primary:active {
+  background-color: #fa904d;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #fa904d;
+  border: none;
+}
+
+em {
+  font-size: small;
+  color: #dadada;
+  font-style: normal;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0px;
+  margin-bottom: 10px;
+}
+
+.btn-submit {
+  padding: 10px;
+}
+
+.comment-list {
+  padding: 10px;
+  padding-left: 15px;
+}
+
+p {
+  margin: 0px;
+}
