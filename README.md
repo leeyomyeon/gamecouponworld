@@ -102,7 +102,7 @@
 
 - 게시판 CRUD
 
-  ![userSearch](README.assets/board_CRUD.gif)
+  [![userSearch](README.assets/board_CRUD.gif)](https://lab.ssafy.com/myyonggu/subpjt3/-/raw/develop/README.assets/%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85.gif)
 
   글쓰기 버튼을 통해 글을 등록합니다.
 
