@@ -42,7 +42,7 @@
 
 - 회원가입
 
-  ![userSearch](README.assets/회원가입.gif)
+  ![image](https://user-images.githubusercontent.com/44407364/186398913-19ade75b-0c0a-4b05-bc71-a98504313cb1.png)
 
   - 회원가입시 이메일 인증을 진행합니다. 
   - 이메일 인증 성공시 회원가입 페이지로 이동하게 됩니다.
