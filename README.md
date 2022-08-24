@@ -52,7 +52,8 @@
 
 - 로그인
 
-  ![userSearch](README.assets/로그인.gif)
+  ![로그인](https://user-images.githubusercontent.com/44407364/186399274-aca374cd-544b-4b0b-be8b-c8f8e7272786.gif)
+
 
   - DB에 저장된 데이터와 비교하여 ID,PW가 일치한 Data가 존재한다면 JWT토큰을 발행하고 JWT토큰을 웹 브라우저 쿠키에 저장.
 
@@ -60,7 +61,8 @@
 
 - 회원수정
 
-  ![userSearch](README.assets/회원정보수정.gif)
+  ![회원정보수정](https://user-images.githubusercontent.com/44407364/186399297-90ec2125-8278-4fc4-9749-8ecc559a4cb3.gif)
+
 
   - 회원 정보 수정을 통해 닉네임, 자기소개, 비밀번호, 사용자의 프로필 사진등을 변경할 수 있습니다.
 
@@ -70,7 +72,7 @@
 
 - 회원 코드 관리
 
-  ![userSearch](README.assets/회원코드.gif)
+  ![회원코드](https://user-images.githubusercontent.com/44407364/186399346-23deac45-9df5-4d44-85d6-85991f9c80d8.gif)
 
   메인 화면의 환경 설정(톱니 바퀴) 버튼을 통해
 
@@ -82,7 +84,8 @@
 
 - 쿠폰 등록 자동화
 
-![userSearch](README.assets/쿠폰등록.gif)
+![쿠폰등록](https://user-images.githubusercontent.com/44407364/186399382-45655acd-f751-4080-96ed-fb167597b722.gif)
+
 
 "자동 등록" 버튼을 누르면 자신이 위에서 저장해놓은 회원코드에 
 
@@ -91,8 +94,8 @@
 (단, AFK 아레나 게임은 게임 내에서 인증번호를 확인해야 합니다.)
 
 
+![보상획득](https://user-images.githubusercontent.com/44407364/186399397-fff08b96-e755-4157-9f4a-77aa2c58d8f2.png)
 
-![보상획득](README.assets/보상획득.PNG)
 
 
 위 과정 두 가지를 거치면 다음과 같이 쿠폰이 정상적으로 모두 등록되었음을 확인할 수 있습니다.
@@ -103,7 +106,8 @@
 
 - 게시판 CRUD
 
-  [![userSearch](README.assets/board_CRUD.gif)](https://lab.ssafy.com/myyonggu/subpjt3/-/raw/develop/README.assets/%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85.gif)
+  ![board_CRUD](https://user-images.githubusercontent.com/44407364/186399422-4dc54b26-247e-470b-b2e2-15bb7f9e46cd.gif)
+
 
   글쓰기 버튼을 통해 글을 등록합니다.
 
@@ -113,7 +117,8 @@
 
 - 게시판 댓글
 
-  ![userSearch](README.assets/comment.gif)
+  ![comment](https://user-images.githubusercontent.com/44407364/186399431-c373b09c-3de6-47f0-991c-446d8156b563.gif)
+
 
   댓글을 작성, 삭제 할 수 있으며 기존 댓글에 답글을 달 수 있습니다.
 
@@ -122,10 +127,10 @@
   즉 원 댓글은 단 하나이며, 그에 대한 여러 개의 답글이 달릴 수 있습니다.
 
 
-
 - 게시판 검색
 
-  ![userSearch](README.assets/search_board.gif)
+  ![search_board](https://user-images.githubusercontent.com/44407364/186399447-5776ba32-b841-437a-8b87-2aff321ecafe.gif)
+
 
   게시판 메인 화면 상단에 위치한 검색어 창에 키워드를 넣고 엔터 혹은 버튼을 누를 시 검색어와 일치하는 제목을 가진 글들이 나타납니다. sql으로 column을 제목을 설정하고, 해당 column 에 키워드가 있는지 검색하는 api 를 구현하였습니다.
 
@@ -137,15 +142,16 @@
 
 - 피드 CRUD
 
-  ![userSearch](README.assets/feed_C.gif)
+  ![feed_C](https://user-images.githubusercontent.com/44407364/186399470-a3a32134-ef8d-4b83-aa03-bcafee77a380.gif)
+
 
   대표 사진 (필수) 하나를 포함한 사진과 함께 간단한 글을 작성할 수 있습니다.
 
   작성된 게시물의 사진이 여러 개 일 경우 좌 우로 사진을 넘길 수 있습니다.
 
   
-
-  ![userSearch](README.assets/팔로우피드.gif)
+  ![팔로우피드](https://user-images.githubusercontent.com/44407364/186399487-1ddd9741-7098-4029-9c60-3d3f6f186d10.gif)
+  
 
   작성된 피드는 모든 피드 리스트 혹은 자신이 팔로우한 사용자의 피드 두 가지로 선택하여 피드 목록을 볼 수 있습니다. 자신이 작성한 피드만 보고싶을 경우에는 "프로필" 에서 확인해야 합니다.
 
@@ -156,7 +162,8 @@
 - 프로필
   - 유저 검색(Create, Read, Delete 로직이 필요)
 
-    ![userSearch](README.assets/userSearch.gif)
+    ![userSearch](https://user-images.githubusercontent.com/44407364/186399520-c1fd023f-1884-4114-a081-8c18c41263b5.gif)
+
 
     - 입력된 값과 유사한 유저아이디를 보여줍니다.
     - 검색된 값을 클릭시 해당 유저의 프로필로 이동하며, 최근검색에 최신순으로 기록이 남습니다.
@@ -165,7 +172,8 @@
     
   - 프로필화면 기능(Read 로직 필요)
   
-    ![profile](README.assets/profile.gif)
+    ![profile](https://user-images.githubusercontent.com/44407364/186399539-2bcf7b88-88af-42a8-9cc9-a6db020be103.gif)
+
     
     - 다른 유저에게 팔로우 요청및 요청취소를 할 수 있습니다.
     - 해당 유저의 작성한 피드와 좋아요 누른 피드를 확인할 수 있습니다.
@@ -175,7 +183,10 @@
 
   - 팔로우 요청에 대한 알림 및 수락(CRD로직&Socket[1] 필요)
 
-    ![alarm](README.assets/alarm.gif)
+    ![alarm](https://user-images.githubusercontent.com/44407364/186399560-0c62a7ee-78f8-4f53-8878-6a31f9ddcfea.gif)
+
+    ![alarm](https://user-images.githubusercontent.com/44407364/186399576-ad651902-79e1-40fb-b255-dde03f4cc6b0.gif) 
+
     
     - 'cksdn135' 유저가 'cksdnwkd135'에게 팔로우 요청시 화면 하단에 알림 메시지가 나옵니다.
     - 오른쪽 상단 알림 아이콘 클릭시 새로운 알림이 들어와 있는것을 확인할 수 있습니다.
