@@ -42,7 +42,8 @@
 
 - 회원가입
 
-  ![image](https://lab.ssafy.com/myyonggu/subpjt3/-/raw/develop/README.assets/%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85.gif)
+  ![회원가입](https://user-images.githubusercontent.com/44407364/186399155-118413db-9406-47c2-96c8-9d5ed1782549.gif)
+
 
   - 회원가입시 이메일 인증을 진행합니다. 
   - 이메일 인증 성공시 회원가입 페이지로 이동하게 됩니다.
