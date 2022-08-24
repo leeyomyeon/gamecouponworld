@@ -17,32 +17,25 @@
 
 
 ## 1. 개발 도구
-
-<img src="README.assets/Vue.PNG" alt="Vue" height="100" />
-
-<img src="README.assets/HTML.PNG" alt="HTML" height="100" />
-
-<img src="README.assets/springboot.PNG" alt="springboot" height="100" />
-
-<img src="README.assets/aws.PNG" alt="aws" height="100" />
-
-<img src="README.assets/jira.PNG" alt="jira" height="100" />
-
-<img src="README.assets/git.PNG" alt="git" height="100" />
-
-
-
-
+- Vue
+- HTML
+- JavaScript
+- CSS
+- Spring Boot
+- AWS
+- Jira SoftWare
+- Git
 
 ## 2. ERD
 
-![ERD](README.assets/ERD.PNG)
+![image](https://user-images.githubusercontent.com/44407364/186398585-2779a805-5e45-4bc9-bd65-0b4c28970869.png)
+
 
 ## 3. 컴포넌트 구조
 
-![componentArchitecture1](README.assets/componentArchitecture1.PNG)
+![image](https://user-images.githubusercontent.com/44407364/186398610-60af26d8-92bf-4c5f-b435-5dc8137a00c0.png)
 
-![componentArchitecture2](README.assets/componentArchitecture2.PNG)
+![image](https://user-images.githubusercontent.com/44407364/186398634-608450f1-eb94-4a05-9fac-998f4719f456.png)
 
 ## 4. 기능
 ### 4.1 회원관리
